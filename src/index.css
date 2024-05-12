@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+/* Điều chỉnh form tìm kiếm */
+.navbar-collapse form {
+    margin-left: auto;
+}
+
+/* Điều chỉnh margin của form tìm kiếm trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .navbar-collapse form {
+        margin-left: 0;
+        margin-top: 10px; /* hoặc bất kỳ giá trị nào phù hợp */
+    }
+}
+
+form {
+    max-width: 400px; /* Giới hạn chiều rộng của form */
+    margin: 0 auto; /* Canh giữa form */
+    padding: 20px; /* Khoảng cách giữa các phần tử trong form */
+    border: 1px solid #ccc; /* Đường viền xung quanh form */
+    border-radius: 5px; /* Bo tròn các góc của form */
+}
+
+label {
+    margin-bottom: 5px; /* Khoảng cách giữa label và input */
+}
+
+label span {
+    color: red;
+}
+
+input[type='email'],
+input[type='password'] {
+    width: 100%; /* Độ rộng của input */
+    padding: 10px; /* Khoảng cách bên trong input */
+    margin-bottom: 15px; /* Khoảng cách giữa các input */
+    border: 1px solid #ccc; /* Đường viền xung quanh input */
+    border-radius: 3px; /* Bo tròn các góc của input */
+}
+
+button {
+    width: 100%; /* Độ rộng của nút */
+    padding: 10px; /* Khoảng cách bên trong nút */
+    margin-top: 10px; /* Khoảng cách giữa nút và các input */
+    /* background-color: #007bff; Màu nền của nút */
+    /* background-color: #245196; */
+    color: #fff; /* Màu chữ của nút */
+    border: none; /* Loại bỏ đường viền của nút */
+    border-radius: 3px; /* Bo tròn các góc của nút */
+    cursor: pointer; /* Biểu tượng con trỏ khi di chuột qua nút */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền của nút khi di chuột qua */
+}
+
+p {
+    margin-top: 15px; /* Khoảng cách giữa nút và dòng chữ "Don't have an account?" */
+}
+
+span {
+    cursor: pointer; /* Biểu tượng con trỏ khi di chuột qua phần "Sign up" */
+    color: #007bff; /* Màu chữ của phần "Sign up" */
+}
+
+.container {
+    padding: 100px 0;
+}
+
+.mb-3 {
+    padding-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.color-primary {
+    color: #245196 !important;
+}
+
+/* .bg-primary {
+} */
+
+.btn-primary {
+    background-color: #245196 !important;
+    border: 1px solid #245196 !important;
+}
