@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
 import avatar from '../assets/images/avatar.jpg';
-
+import Student_info from './Student-info';
+import Student_scores from './Student-scores';
 const Student = () => {
-    // const [showLoginForm, setShowLoginForm] = useState(false);
-    // const [showSignupForm, setShowSignupForm] = useState(false);
 
-    // const toggleLoginForm = () => {
-    //     setShowLoginForm(!showLoginForm);
-    //     setShowSignupForm(false); // Ẩn form đăng ký khi hiển thị form đăng nhập
-    // };
-
-    // const toggleSignupForm = () => {
-    //     setShowSignupForm(!showSignupForm);
-    //     setShowLoginForm(false); // Ẩn form đăng nhập khi hiển thị form đăng ký
-    // };
+    const [activeTab, setActiveTab] = useState('');
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+    };
     return (
-        <div>
-            <dv className="wrap">
+        <div className='all'>
+            <div className="wrap">
                 <div className="wr-menu">
                     <div className="wr-menu__info">
                         <img src={avatar} alt="avatar" className="wr-menu__info-avatar"></img>
@@ -28,7 +22,7 @@ const Student = () => {
                     <div className="wr-menu__func">Quản lý chức năng</div>
                     <ul className="wr-menu__list">
                         <li className="wr-menu__list-item">
-                            <a href="" className="wr-menu__list-item-link">
+                            <a href='/src/Component/Student-info' onClick={() => handleTabChange('info')} className="wr-menu__list-item-link">
                                 <i class="wr-menu__list-item-link-icon fa-solid fa-user"></i>
                                 Thông tin học sinh
                             </a>
@@ -40,15 +34,18 @@ const Student = () => {
                             </a>
                         </li>
                         <li className="wr-menu__list-item">
-                            <a href="" className="wr-menu__list-item-link">
+                            <a href='#' onClick={() => handleTabChange('scores')} className="wr-menu__list-item-link">
                                 <i class="wr-menu__list-item-link-icon fa-solid fa-hat-wizard"></i>
                                 Điểm số
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div className="wr-info"></div>
-            </dv>
+                <div className="wr-info">
+                    {activeTab === 'info' && <Student_info />}
+                    {activeTab === 'scores' && <Student_scores />}
+                </div>
+            </div>
         </div>
     );
 };
