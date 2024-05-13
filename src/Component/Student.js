@@ -22,7 +22,7 @@ const Student = () => {
                     <div className="wr-menu__func">Quản lý chức năng</div>
                     <ul className="wr-menu__list">
                         <li className="wr-menu__list-item">
-                            <a href='/src/Component/Student-info' onClick={() => handleTabChange('info')} className="wr-menu__list-item-link">
+                            <a href='/info' onClick={() => handleTabChange('info')} className="wr-menu__list-item-link">
                                 <i class="wr-menu__list-item-link-icon fa-solid fa-user"></i>
                                 Thông tin học sinh
                             </a>
